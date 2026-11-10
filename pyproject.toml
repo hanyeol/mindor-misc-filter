@@ -1,0 +1,31 @@
+[build-system]
+requires = [ "setuptools>=61", "wheel" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mindor-misc-filter"
+version = "0.1.0"
+description = "Inference-only MISCFilter deblurring kernels extracted from ChengxuLiu/MISCFilter."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [ { name = "Hanyeol Cho" } ]
+keywords = [ "misc-filter", "deblurring", "image-restoration", "deformable-conv" ]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch>=2.0",
+  "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/hanyeol/mindor-misc-filter"
+Repository = "https://github.com/hanyeol/mindor-misc-filter"
+Upstream = "https://github.com/ChengxuLiu/MISCFilter"
+
+[tool.setuptools.packages.find]
+where = [ "." ]
+include = [ "mindor_misc_filter*" ]
